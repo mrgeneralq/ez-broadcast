@@ -1,0 +1,11 @@
+#prefix before every broadcast message
+prefix: '&f[&6ezBroadcast&f]'
+
+#interval in seconds between every message
+interval: 30
+
+#all messages to be broadcasted
+messages:
+  - '&1Hi there'
+  - '&3This is a message'
+  - '&5And here is the final message'
