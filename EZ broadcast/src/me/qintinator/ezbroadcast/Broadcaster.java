@@ -51,10 +51,14 @@ public class Broadcaster {
 					
 					
 					for(Player p: Bukkit.getOnlinePlayers()) {
-					
-						
+										
 						try {
-							p.sendMessage(ChatColor.translateAlternateColorCodes('&',prefix + " " + loadedMessages.get(messageId)));						
+							String[] splittedMessages = loadedMessages.get(messageId).split("\\\\n+");
+							for(int i = 0; i < splittedMessages.length; i++) {
+								String messagePrefix = (i == 0)? prefix + " ":"";				
+								p.sendMessage(ChatColor.translateAlternateColorCodes('&', messagePrefix + splittedMessages[i]));						
+							}
+
 						}catch(Exception e) {
 							Bukkit.getLogger().warning("Could not send message! Check format in config and reload it!");
 						}
