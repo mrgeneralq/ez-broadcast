@@ -1,0 +1,13 @@
+#prefix before every broadcast message
+prefix: '&f[&6ezBroadcast&f]'
+
+#interval in seconds between every message
+interval: 30
+
+#all messages to be broadcasted
+# use \n to print on a new line
+messages:
+  - '&1Hi there'
+  - '&3This is a message'
+  - '&5And here is the final message'
+  - '&5and here is the split version\n&6of a new line\n&2Add as much lines as you wish!'
